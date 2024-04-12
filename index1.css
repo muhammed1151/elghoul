@@ -1,4 +1,4 @@
-* {
+ * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -122,6 +122,7 @@ nav {
 }
 .item_position {
   width: 100%;
+  max-height: 100;
   color: black;
   text-decoration: none;
   font-size: 1.6em;
@@ -160,7 +161,7 @@ nav {
 }
 .grid_item {
   box-shadow: 0 0 14px 0px black;
-  min-height: 30em;
+  height: auto;
   background-color: #fff;
   border-radius: 20px;
 }
@@ -200,6 +201,9 @@ nav {
   top: 67px;
   padding: 15px 0;
 }
+.store_packages {
+  width: 100%;
+}
 @media screen and (max-width: 702px) {
   .left-box {
     display: none;
@@ -214,10 +218,47 @@ nav {
     display: none;
   }
 }
+
 @media screen and (max-width: 543px) {
   .paper_section,
   .string_section,
   .foom_section {
-    grid-template-columns: repeat(2, minmax(200px, 1fr));
+    grid-template-columns: repeat(2, minmax(auto, 1fr));
   }
 }
+
+@media screen and (max-width: 527px) {
+  header {
+    width: 100%;
+  }
+  .main_frame {
+    padding: 0;
+  }
+  .paper_section,
+  .string_section,
+  .foom_section {
+    gap: 15px;
+  }
+  .content {
+    width: 100%;
+  }
+  .nav_bar nav .item_position {
+    width: 100%;
+    padding: 0 5%;
+    margin: 0;
+  }
+  .left-section a img {
+    width: 100px;
+  }
+  .right_section p {
+    font-size: 10px;
+  }
+  .whatsapp_icon {
+    font-size: 16px;
+  }
+}
+/* @media screen and (max-width: 672px) {
+  .grid_item {
+    max-height: 20px;
+  }
+} */
